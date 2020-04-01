@@ -40,11 +40,11 @@ BuildRequires:  python%{pyver}-pbr >= 3.1.1
 BuildRequires:  python%{pyver}-testrepository
 BuildRequires:  python%{pyver}-testscenarios
 BuildRequires:  python%{pyver}-testtools
-BuildRequires:  python%{pyver}-ansible-runner >= 1.4.4
+BuildRequires:  python%{pyver}-ansible-runner >= 1.2.0
 
 Requires:       python%{pyver}-pbr >= 3.1.1
 Requires:       python%{pyver}-six >= 1.11.0
-Requires:       python%{pyver}-ansible-runner >= 1.4.4
+Requires:       python%{pyver}-ansible-runner >= 1.2.0
 %if %{pyver} == 2
 Requires:       PyYAML
 %else
