@@ -1,15 +1,3 @@
-# Macros for py2/py3 compatibility
-%if 0%{?fedora} || 0%{?rhel} > 7
-%global pyver 3
-%else
-%global pyver 2
-%endif
-
-%global pyver_bin python%{pyver}
-%global pyver_sitelib %{expand:%{python%{pyver}_sitelib}}
-%global pyver_install %{expand:%{py%{pyver}_install}}
-%global pyver_build %{expand:%{py%{pyver}_build}}
-# End of macros for py2/py3 compatibility
 
 %{!?upstream_version: %global upstream_version %{version}}
 %global upstream_name validations-libs
@@ -28,30 +16,26 @@ BuildArch:      noarch
 %description
 A collection of python libraries for the Validation Framework
 
-%package -n     python%{pyver}-%{upstream_name}
+%package -n     python3-%{upstream_name}
 Summary:        %{sum}
-%{?python_provide:%python_provide python%{pyver}-%{upstream_name}}
+%{?python_provide:%python_provide python3-%{upstream_name}}
 
 BuildRequires:  git
 BuildRequires:  openstack-macros
-BuildRequires:  python%{pyver}-setuptools
-BuildRequires:  python%{pyver}-devel
-BuildRequires:  python%{pyver}-pbr >= 3.1.1
-BuildRequires:  python%{pyver}-testrepository
-BuildRequires:  python%{pyver}-testscenarios
-BuildRequires:  python%{pyver}-testtools
-BuildRequires:  python%{pyver}-ansible-runner >= 1.4.4
+BuildRequires:  python3-setuptools
+BuildRequires:  python3-devel
+BuildRequires:  python3-pbr >= 3.1.1
+BuildRequires:  python3-testrepository
+BuildRequires:  python3-testscenarios
+BuildRequires:  python3-testtools
+BuildRequires:  python3-ansible-runner >= 1.4.4
 
-Requires:       python%{pyver}-pbr >= 3.1.1
-Requires:       python%{pyver}-six >= 1.11.0
-Requires:       python%{pyver}-ansible-runner >= 1.4.4
-%if %{pyver} == 2
-Requires:       PyYAML
-%else
-Requires:       python%{pyver}-PyYAML
-%endif
+Requires:       python3-pbr >= 3.1.1
+Requires:       python3-six >= 1.11.0
+Requires:       python3-ansible-runner >= 1.4.4
+Requires:       python3-PyYAML
 
-%description -n python%{pyver}-%{upstream_name}
+%description -n python3-%{upstream_name}
 A collection of python libraries for the Validation Framework
 
 %prep
@@ -62,19 +46,19 @@ A collection of python libraries for the Validation Framework
 %py_req_cleanup
 
 %build
-%{pyver_build}
+%{py3_build}
 
 %install
-%{pyver_install}
+%{py3_install}
 
 %check
-PYTHON=%{pyver_bin} %{pyver_bin} setup.py test
+PYTHON=%{__python3} %{__python3} setup.py test
 
-%files -n python%{pyver}-%{upstream_name}
+%files -n python3-%{upstream_name}
 %license LICENSE
 %doc README* AUTHORS ChangeLog
-%{pyver_sitelib}/validations_libs
-%{pyver_sitelib}/validations_libs-*.egg-info
-%exclude %{pyver_sitelib}/validations_libs/test*
+%{python3_sitelib}/validations_libs
+%{python3_sitelib}/validations_libs-*.egg-info
+%exclude %{python3_sitelib}/validations_libs/test*
 
 %changelog
