@@ -68,3 +68,4 @@ PYTHON=%{__python3} %{__python3} setup.py test
 * Mon May 18 2020 RDO <dev@lists.rdoproject.org> 1.0.0-1
 - Update to 1.0.0
 
+
