@@ -78,3 +78,4 @@ PYTHON=%{pyver_bin} %{pyver_bin} setup.py test
 %exclude %{pyver_sitelib}/validations_libs/test*
 
 %changelog
+
