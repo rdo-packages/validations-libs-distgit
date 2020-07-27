@@ -62,3 +62,4 @@ PYTHON=%{__python3} %{__python3} setup.py test
 %exclude %{python3_sitelib}/validations_libs/test*
 
 %changelog
+
