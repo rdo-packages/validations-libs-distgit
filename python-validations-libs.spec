@@ -17,8 +17,8 @@
 
 Name:           python-%{upstream_name}
 Summary:        %{sum}
-Version:        XXX
-Release:        XXX
+Version:        1.0.4
+Release:        0.1%{?dist}
 License:        ASL 2.0
 URL:            https://opendev.org/openstack/validations-libs
 Source0:        https://tarballs.opendev.org/openstack/%{upstream_name}/%{upstream_name}-%{upstream_version}.tar.gz
@@ -41,6 +41,9 @@ BuildRequires:  python%{pyver}-testrepository
 BuildRequires:  python%{pyver}-testscenarios
 BuildRequires:  python%{pyver}-testtools
 BuildRequires:  python%{pyver}-ansible-runner >= 1.2.0
+%if %{pyver} == 2
+BuildRequires:  python2-mock
+%endif
 
 Requires:       python%{pyver}-pbr >= 3.1.1
 Requires:       python%{pyver}-six >= 1.11.0
@@ -67,6 +70,11 @@ A collection of python libraries for the Validation Framework
 %install
 %{pyver_install}
 
+# Cleanup once https://review.opendev.org/#/c/755311/ is in tag release
+if [ ! -d "%{buildroot}%{_datadir}/ansible" ]; then
+mkdir -p %{buildroot}%{_datadir}/ansible
+fi
+
 %check
 PYTHON=%{pyver_bin} %{pyver_bin} setup.py test
 
@@ -79,4 +87,7 @@ PYTHON=%{pyver_bin} %{pyver_bin} setup.py test
 %exclude %{pyver_sitelib}/validations_libs/test*
 
 %changelog
+* Fri Sep 25 2020 RDO <dev@lists.rdoproject.org> 1.0.4-0.1
+- Update to 1.0.4
+
 
