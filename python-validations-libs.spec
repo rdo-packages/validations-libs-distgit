@@ -5,8 +5,8 @@
 
 Name:           python-%{upstream_name}
 Summary:        %{sum}
-Version:        XXX
-Release:        XXX
+Version:        1.0.4
+Release:        1%{?dist}
 License:        ASL 2.0
 URL:            https://opendev.org/openstack/validations-libs
 Source0:        https://tarballs.opendev.org/openstack/%{upstream_name}/%{upstream_name}-%{upstream_version}.tar.gz
@@ -62,4 +62,7 @@ PYTHON=%{__python3} %{__python3} setup.py test
 %exclude %{python3_sitelib}/validations_libs/test*
 
 %changelog
+* Fri Sep 25 2020 RDO <dev@lists.rdoproject.org> 1.0.4-1
+- Update to 1.0.4
+
 
