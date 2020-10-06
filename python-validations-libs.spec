@@ -79,3 +79,4 @@ PYTHON=%{pyver_bin} %{pyver_bin} setup.py test
 
 %changelog
 
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/validations-libs/commit/?id=96a5d4142234effc5cde2145fa5608e51bdee7a9
