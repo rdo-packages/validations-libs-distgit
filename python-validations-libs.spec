@@ -81,7 +81,6 @@ PYTHON=%{pyver_bin} %{pyver_bin} setup.py test
 %files -n python%{pyver}-%{upstream_name}
 %license LICENSE
 %doc README* AUTHORS ChangeLog
-%{_datadir}/ansible
 %{pyver_sitelib}/validations_libs
 %{pyver_sitelib}/validations_libs-*.egg-info
 %exclude %{pyver_sitelib}/validations_libs/test*
