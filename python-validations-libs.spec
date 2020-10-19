@@ -57,7 +57,6 @@ PYTHON=%{__python3} %{__python3} setup.py test
 %files -n python3-%{upstream_name}
 %license LICENSE
 %doc README* AUTHORS ChangeLog
-%{_datadir}/ansible
 %{python3_sitelib}/validations_libs
 %{python3_sitelib}/validations_libs-*.egg-info
 %exclude %{python3_sitelib}/validations_libs/test*
