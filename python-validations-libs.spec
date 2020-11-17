@@ -33,7 +33,7 @@ A collection of python libraries for the Validation Framework
 Summary:        %{sum}
 %{?python_provide:%python_provide python3-%{upstream_name}}
 
-BuildRequires:  git
+BuildRequires:  git-core
 BuildRequires:  openstack-macros
 BuildRequires:  python3-setuptools
 BuildRequires:  python3-devel
