@@ -1,0 +1,11 @@
+Code-Review+2: Javier Peña <jpena@redhat.com>
+Code-Review+2: mathieu bultel <mat.bultel@gmail.com>
+Workflow+1: Javier Peña <jpena@redhat.com>
+Code-Review+2: Joel Capitao <jcapitao@redhat.com>
+Workflow+1: Joel Capitao <jcapitao@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Wed, 17 Feb 2021 13:50:16 +0000
+Reviewed-on: https://review.rdoproject.org/r/31997
+Project: openstack/validations-libs-distgit
+Branch: refs/heads/train-rdo
