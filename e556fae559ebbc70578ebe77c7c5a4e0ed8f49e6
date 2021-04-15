@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "e37b1019_2a6ee1c7",
+        "filename": "python-validations-libs.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2021-04-15T11:10:07Z",
+      "side": 1,
+      "message": "Needs to be python3-cliff, which is the package name",
+      "range": {
+        "startLine": 45,
+        "startChar": 16,
+        "endLine": 45,
+        "endChar": 21
+      },
+      "revId": "e556fae559ebbc70578ebe77c7c5a4e0ed8f49e6",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "b5d7732e_68507250",
+        "filename": "python-validations-libs.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 51,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2021-04-15T11:10:07Z",
+      "side": 1,
+      "message": "Same.",
+      "range": {
+        "startLine": 51,
+        "startChar": 16,
+        "endLine": 51,
+        "endChar": 21
+      },
+      "revId": "e556fae559ebbc70578ebe77c7c5a4e0ed8f49e6",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    }
+  ]
+}
