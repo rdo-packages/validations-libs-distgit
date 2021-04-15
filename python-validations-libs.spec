@@ -34,6 +34,7 @@ Summary:        %{sum}
 
 BuildRequires:  git
 BuildRequires:  openstack-macros
+<<<<<<< HEAD   (d47ebb Escape nested macro calls)
 BuildRequires:  python%{pyver}-setuptools
 BuildRequires:  python%{pyver}-devel
 BuildRequires:  python%{pyver}-pbr >= 3.1.1
@@ -44,7 +45,18 @@ BuildRequires:  python%{pyver}-ansible-runner >= 1.2.0
 %if %{pyver} == 2
 BuildRequires:  python2-mock
 %endif
+=======
+BuildRequires:  python3-setuptools
+BuildRequires:  python3-devel
+BuildRequires:  python3-pbr >= 3.1.1
+BuildRequires:  python3-testrepository
+BuildRequires:  python3-testscenarios
+BuildRequires:  python3-testtools
+BuildRequires:  python3-ansible-runner >= 1.4.4
+BuildRequires:  python3-cliff >= 3.2.0
+>>>>>>> CHANGE (b1db7c cliff is now listed in requiremets)
 
+<<<<<<< HEAD   (d47ebb Escape nested macro calls)
 Requires:       python%{pyver}-pbr >= 3.1.1
 Requires:       python%{pyver}-six >= 1.11.0
 Requires:       python%{pyver}-ansible-runner >= 1.2.0
@@ -53,6 +65,13 @@ Requires:       PyYAML
 %else
 Requires:       python%{pyver}-PyYAML
 %endif
+=======
+Requires:       python3-pbr >= 3.1.1
+Requires:       python3-six >= 1.11.0
+Requires:       python3-ansible-runner >= 1.4.4
+Requires:       python3-PyYAML
+Requires:       python3-cliff >= 3.2.0
+>>>>>>> CHANGE (b1db7c cliff is now listed in requiremets)
 
 %description -n python%{pyver}-%{upstream_name}
 A collection of python libraries for the Validation Framework
