@@ -44,6 +44,7 @@ BuildRequires:  python%{pyver}-ansible-runner >= 1.2.0
 %if %{pyver} == 2
 BuildRequires:  python2-mock
 %endif
+BuildRequires:  python%{pyver}-cliff >= 2.16.0
 
 Requires:       python%{pyver}-pbr >= 3.1.1
 Requires:       python%{pyver}-six >= 1.11.0
@@ -53,6 +54,7 @@ Requires:       PyYAML
 %else
 Requires:       python%{pyver}-PyYAML
 %endif
+Requires:       python%{pyver}-cliff >= 2.16.0
 
 %description -n python%{pyver}-%{upstream_name}
 A collection of python libraries for the Validation Framework
@@ -80,6 +82,7 @@ PYTHON=%{pyver_bin} %{pyver_bin} setup.py test
 
 %files -n python%{pyver}-%{upstream_name}
 %license LICENSE
+%{_bindir}/validation
 %doc README* AUTHORS ChangeLog
 %{pyver_sitelib}/validations_libs
 %{pyver_sitelib}/validations_libs-*.egg-info
