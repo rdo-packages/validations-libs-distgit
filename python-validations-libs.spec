@@ -34,6 +34,7 @@ Summary:        %{sum}
 
 BuildRequires:  git
 BuildRequires:  openstack-macros
+
 BuildRequires:  python%{pyver}-setuptools
 BuildRequires:  python%{pyver}-devel
 BuildRequires:  python%{pyver}-pbr >= 3.1.1
@@ -44,6 +45,7 @@ BuildRequires:  python%{pyver}-ansible-runner >= 1.2.0
 %if %{pyver} == 2
 BuildRequires:  python2-mock
 %endif
+BuildRequires:  python%{pyver}-cliff
 
 Requires:       python%{pyver}-pbr >= 3.1.1
 Requires:       python%{pyver}-six >= 1.11.0
@@ -53,6 +55,7 @@ Requires:       PyYAML
 %else
 Requires:       python%{pyver}-PyYAML
 %endif
+Requires:       python%{pyver}-cliff
 
 %description -n python%{pyver}-%{upstream_name}
 A collection of python libraries for the Validation Framework
