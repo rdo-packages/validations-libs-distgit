@@ -29,11 +29,13 @@ BuildRequires:  python3-testrepository
 BuildRequires:  python3-testscenarios
 BuildRequires:  python3-testtools
 BuildRequires:  python3-ansible-runner >= 1.4.4
+BuildRequires:  python3-cliff >= 3.2.0
 
 Requires:       python3-pbr >= 3.1.1
 Requires:       python3-six >= 1.11.0
 Requires:       python3-ansible-runner >= 1.4.4
 Requires:       python3-PyYAML
+Requires:       python3-cliff >= 3.2.0
 
 %description -n python3-%{upstream_name}
 A collection of python libraries for the Validation Framework
@@ -56,6 +58,7 @@ PYTHON=%{__python3} %{__python3} setup.py test
 
 %files -n python3-%{upstream_name}
 %license LICENSE
+%{_bindir}/validation
 %doc README* AUTHORS ChangeLog
 %{python3_sitelib}/validations_libs
 %{python3_sitelib}/validations_libs-*.egg-info
