@@ -68,6 +68,13 @@ A collection of python libraries for the Validation Framework
 %{py3_build}
 
 %install
+# TODO remove this when https://review.opendev.org/c/openstack/validations-libs/+/782574 merged
+if [ ! -f "%{buildroot}%{_bindir}/validation" ]; then
+cat <<EOF >%{buildroot}%{_bindir}/validation
+#!/usr/bin/env python3
+EOF
+chmod 755 %{buildroot}%{_bindir}/validation
+fi
 %{py3_install}
 
 %check
@@ -75,6 +82,7 @@ PYTHON=%{__python3} %{__python3} setup.py test
 
 %files -n python3-%{upstream_name}
 %license LICENSE
+%{_bindir}/validation
 %doc README* AUTHORS ChangeLog
 %{python3_sitelib}/validations_libs
 %{python3_sitelib}/validations_libs-*.egg-info
