@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a51f0f0d_fe21d43b",
+        "filename": "python-validations-libs.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2021-05-19T14:24:23Z",
+      "side": 1,
+      "message": "This does not work in the RPM spec. Since we take care of having the right ansible version in the RDO repos, let\u0027s define it as just \"BuildRequires: ansible\"",
+      "range": {
+        "startLine": 46,
+        "startChar": 24,
+        "endLine": 46,
+        "endChar": 54
+      },
+      "revId": "273c9c54c44ef35e27060bfbabad8798e857cbeb",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5709063e_e11b46e2",
+        "filename": "python-validations-libs.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2021-05-19T14:24:23Z",
+      "side": 1,
+      "message": "same as above",
+      "revId": "273c9c54c44ef35e27060bfbabad8798e857cbeb",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    }
+  ]
+}
