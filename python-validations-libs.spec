@@ -93,3 +93,4 @@ PYTHON=%{pyver_bin} %{pyver_bin} setup.py test
 - Update to 1.0.4
 
 
+# REMOVEME: error caused by commit https://opendev.org/openstack/validations-libs/commit/858d07182058c76a9028d29c8de15337e16238ce
