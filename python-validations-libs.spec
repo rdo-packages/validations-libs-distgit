@@ -66,6 +66,10 @@ A collection of python libraries for the Validation Framework
 # to distutils requires_dist config
 %py_req_cleanup
 
+%if %{pyver} == 2
+sed -i '/formatter_class=_argparse.SmartHelpFormatter/d' validations_libs/cli/base.py
+%endif
+
 %build
 %{pyver_build}
 
