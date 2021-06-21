@@ -16,6 +16,29 @@
       "revId": "35d519c629a952fa4c55ab867545b0255edd6f20",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "7d5b39c3_75476e97",
+        "filename": "python-validations-libs.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2021-06-21T13:33:41Z",
+      "side": 1,
+      "message": "We should use the %{_sysconfdir} macro instead of /etc",
+      "range": {
+        "startLine": 84,
+        "startChar": 0,
+        "endLine": 84,
+        "endChar": 5
+      },
+      "revId": "35d519c629a952fa4c55ab867545b0255edd6f20",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
     }
   ]
 }
