@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "b37a889e_d3274d70",
+        "filename": "python-validations-libs.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2021-06-21T16:31:40Z",
+      "side": 1,
+      "message": "Based on the job output, you will need to create the %{buildroot}%{_sysconfdir} directory before creating the file.",
+      "revId": "357d2bfde4ac97cb64dc8873be7545bdef8f1eca",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    }
+  ]
+}
