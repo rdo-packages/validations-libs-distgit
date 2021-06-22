@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "244505c8_957b5b63",
+        "filename": "python-validations-libs.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 90,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2021-06-22T08:24:12Z",
+      "side": 1,
+      "message": "rpmlint is complaining that this file is not specified as a config file. We can fix it by setting it as:\n\n%config(noreplace) %attr(0644, root, root) %{_sysconfdir}/validation.cfg\n\nFeel free to adapt the permissions, of course.",
+      "revId": "0d30d73d96860a1752d52ee1f89ea4d813ac61ce",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    }
+  ]
+}
