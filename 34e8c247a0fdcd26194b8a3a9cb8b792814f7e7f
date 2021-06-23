@@ -1,0 +1,50 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ccd7015f_b64d88df",
+        "filename": "python-validations-libs.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 50,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2021-06-23T10:26:25Z",
+      "side": 1,
+      "message": "As discussed in a previous patch, please do not use BuildConflicts in the spec.",
+      "range": {
+        "startLine": 48,
+        "startChar": 0,
+        "endLine": 50,
+        "endChar": 32
+      },
+      "revId": "34e8c247a0fdcd26194b8a3a9cb8b792814f7e7f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cfce717e_62c5e255",
+        "filename": "python-validations-libs.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 61,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2021-06-23T10:26:25Z",
+      "side": 1,
+      "message": "Similar to the above, please do not use Conflicts. It is explicitly discouraged by the Fedora packaging guidelines [1], and we will take care of keeping good versions in the RDO and OSP repositories.\n\n[1] - https://fedoraproject.org/wiki/Packaging:Conflicts#Acceptable_Uses_of_Conflicts:",
+      "range": {
+        "startLine": 59,
+        "startChar": 0,
+        "endLine": 61,
+        "endChar": 27
+      },
+      "revId": "34e8c247a0fdcd26194b8a3a9cb8b792814f7e7f",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    }
+  ]
+}
