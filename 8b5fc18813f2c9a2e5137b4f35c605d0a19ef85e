@@ -22,6 +22,30 @@
       "revId": "8b5fc18813f2c9a2e5137b4f35c605d0a19ef85e",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "064969fe_5f8f1566",
+        "filename": "python-validations-libs.spec",
+        "patchSetId": 5
+      },
+      "lineNbr": 84,
+      "author": {
+        "id": 278
+      },
+      "writtenOn": "2021-06-23T14:11:57Z",
+      "side": 1,
+      "message": "Oops sorry, I\u0027m on pto, and I updated the review too quickly without trying to think about the change 😄",
+      "parentUuid": "e9cc876c_5206dfd3",
+      "range": {
+        "startLine": 84,
+        "startChar": 0,
+        "endLine": 84,
+        "endChar": 1
+      },
+      "revId": "8b5fc18813f2c9a2e5137b4f35c605d0a19ef85e",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
     }
   ]
 }
