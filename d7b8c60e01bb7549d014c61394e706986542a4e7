@@ -1,0 +1,9 @@
+Code-Review+2: Javier Peña <jpena@redhat.com>
+Code-Review+2: Gaël Chamoulaud <gchamoul@redhat.com>
+Workflow+1: Gaël Chamoulaud <gchamoul@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Thu, 24 Jun 2021 12:25:34 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/validations-libs-distgit/+/34222
+Project: openstack/validations-libs-distgit
+Branch: refs/heads/rpm-master
