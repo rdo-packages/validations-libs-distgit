@@ -75,6 +75,11 @@ A collection of python libraries for the Validation Framework
 if [ ! -d "%{buildroot}%{_sysconfdir}" ]; then
 mkdir -p %{buildroot}%{_sysconfdir}
 fi
+
+if [ -f "%{buildroot}/usr/etc/validation.cfg" ]; then
+mv %{buildroot}/usr/etc/validation.cfg %{buildroot}%{_sysconfdir}/validation.cfg
+fi
+
 if [ ! -f "%{buildroot}%{_sysconfdir}/validation.cfg" ]; then
 cat <<EOF >%{buildroot}%{_sysconfdir}/validation.cfg
 [default]
