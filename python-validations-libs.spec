@@ -67,7 +67,7 @@ A collection of python libraries for the Validation Framework
 %py_req_cleanup
 
 %build
-%{py3_build}
+%{py3_build} --prefix /
 
 %install
 %{py3_install}
