@@ -77,12 +77,29 @@ if [ ! -d "%{buildroot}%{_datadir}/ansible" ]; then
 mkdir -p %{buildroot}%{_datadir}/ansible
 fi
 
+# TODO remove this when https://review.opendev.org/c/openstack/validations-libs/+/792460 merged
+if [ ! -d "%{buildroot}%{_sysconfdir}" ]; then
+mkdir -p %{buildroot}%{_sysconfdir}
+fi
+
+if [ -f "%{buildroot}/usr/etc/validation.cfg" ]; then
+mv %{buildroot}/usr/etc/validation.cfg %{buildroot}%{_sysconfdir}/validation.cfg
+fi
+
+if [ ! -f "%{buildroot}%{_sysconfdir}/validation.cfg" ]; then
+cat <<EOF >%{buildroot}%{_sysconfdir}/validation.cfg
+[default]
+ansible_base_dir = /usr/share/ansible/
+EOF
+fi
+
 %check
 PYTHON=%{pyver_bin} %{pyver_bin} setup.py test
 
 %files -n python%{pyver}-%{upstream_name}
 %license LICENSE
-%{_bindir}/validation
+%config(noreplace) %attr(0644, root, root) %{_sysconfdir}/validation.cfg
+%if 0%{?dlrn} > 0 %{_bindir}/validation %endif
 %doc README* AUTHORS ChangeLog
 %{pyver_sitelib}/validations_libs
 %{pyver_sitelib}/validations_libs-*.egg-info
