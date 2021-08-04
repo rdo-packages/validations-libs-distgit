@@ -53,11 +53,28 @@ A collection of python libraries for the Validation Framework
 %install
 %{py3_install}
 
+# TODO remove this when https://review.opendev.org/c/openstack/validations-libs/+/792460 merged
+if [ ! -d "%{buildroot}%{_sysconfdir}" ]; then
+mkdir -p %{buildroot}%{_sysconfdir}
+fi
+
+if [ -f "%{buildroot}/usr/etc/validation.cfg" ]; then
+mv %{buildroot}/usr/etc/validation.cfg %{buildroot}%{_sysconfdir}/validation.cfg
+fi
+
+if [ ! -f "%{buildroot}%{_sysconfdir}/validation.cfg" ]; then
+cat <<EOF >%{buildroot}%{_sysconfdir}/validation.cfg
+[default]
+ansible_base_dir = /usr/share/ansible/
+EOF
+fi
+
 %check
 PYTHON=%{__python3} %{__python3} setup.py test
 
 %files -n python3-%{upstream_name}
 %license LICENSE
+%config(noreplace) %attr(0644, root, root) %{_sysconfdir}/validation.cfg
 %{_bindir}/validation
 %doc README* AUTHORS ChangeLog
 %{python3_sitelib}/validations_libs
