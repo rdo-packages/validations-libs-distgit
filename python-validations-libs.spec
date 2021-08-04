@@ -67,6 +67,8 @@ A collection of python libraries for the Validation Framework
 %py_req_cleanup
 
 %build
+# Set the data_file path to / instead of prefix
+sed -i 's/etc/\/etc/' setup.cfg
 %{py3_build}
 
 %install
