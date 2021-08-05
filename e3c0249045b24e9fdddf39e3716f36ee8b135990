@@ -46,6 +46,30 @@
       "revId": "e3c0249045b24e9fdddf39e3716f36ee8b135990",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "d05dbb2d_8e79a789",
+        "filename": "python-validations-libs.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 83,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2021-08-05T04:58:54Z",
+      "side": 1,
+      "message": "Looks ok but will hold for jpena",
+      "parentUuid": "79bd0dd0_5d4e2278",
+      "range": {
+        "startLine": 81,
+        "startChar": 0,
+        "endLine": 83,
+        "endChar": 61
+      },
+      "revId": "e3c0249045b24e9fdddf39e3716f36ee8b135990",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
     }
   ]
 }
