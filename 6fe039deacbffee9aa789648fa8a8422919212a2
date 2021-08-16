@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "a4af284c_89000750",
+        "filename": "python-validations-libs.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 85,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2021-08-16T12:40:01Z",
+      "side": 1,
+      "message": "1",
+      "range": {
+        "startLine": 85,
+        "startChar": 59,
+        "endLine": 85,
+        "endChar": 60
+      },
+      "revId": "6fe039deacbffee9aa789648fa8a8422919212a2",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    }
+  ]
+}
