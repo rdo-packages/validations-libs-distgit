@@ -7,7 +7,7 @@
 
 Name:           python-%{upstream_name}
 Summary:        %{sum}
-Version:        1.1.0
+Version:        1.2.0
 Release:        1%{?dist}
 License:        ASL 2.0
 URL:            https://opendev.org/openstack/validations-libs
@@ -82,6 +82,9 @@ PYTHON=%{__python3} %{__python3} setup.py test
 %exclude %{python3_sitelib}/validations_libs/test*
 
 %changelog
+* Mon Aug 16 2021 Jiri Podivin <jpodivin@redhat.com> 1.2.0-0
+- Update to 1.2.0
+
 * Thu May 06 2021 RDO <dev@lists.rdoproject.org> 1.1.0-1
 - Update to 1.1.0
 
