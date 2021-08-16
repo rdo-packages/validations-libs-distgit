@@ -1,5 +1,5 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x5d2d1e4fb8d38e6af76c50d53d4fec30cf5ce3da
+%global sources_gpg_sign 0x4c29ff0e437f3351fd82bdf47c5a3bc787dc7035 
 
 %{!?upstream_version: %global upstream_version %{version}}
 %global upstream_name validations-libs
@@ -7,7 +7,7 @@
 
 Name:           python-%{upstream_name}
 Summary:        %{sum}
-Version:        1.1.0
+Version:        1.2.0
 Release:        1%{?dist}
 License:        ASL 2.0
 URL:            https://opendev.org/openstack/validations-libs
@@ -82,6 +82,9 @@ PYTHON=%{__python3} %{__python3} setup.py test
 %exclude %{python3_sitelib}/validations_libs/test*
 
 %changelog
+* Mon Aug 16 2021 Jiri Podivin <jpodivin@redhat.com> 1.2.0-0
+- Update to 1.2.0
+
 * Thu May 06 2021 RDO <dev@lists.rdoproject.org> 1.1.0-1
 - Update to 1.1.0
 
