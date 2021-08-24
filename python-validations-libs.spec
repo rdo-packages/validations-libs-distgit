@@ -98,6 +98,7 @@ PYTHON=%{__python3} %{__python3} setup.py test
 %doc README* AUTHORS ChangeLog
 %{python3_sitelib}/validations_libs
 %{python3_sitelib}/validations_libs-*.egg-info
+%{buildroot}%{_sysconfdir}/validation.cfg
 %exclude %{python3_sitelib}/validations_libs/test*
 
 %changelog
