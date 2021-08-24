@@ -81,6 +81,24 @@
       "revId": "e3c0249045b24e9fdddf39e3716f36ee8b135990",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "bc9cc972_0eba9a6a",
+        "filename": "python-validations-libs.spec",
+        "patchSetId": 4
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2021-08-24T08:48:09Z",
+      "side": 0,
+      "message": "Because that\u0027s where the rpm build process will take it from to create the package.",
+      "parentUuid": "e11de30f_e3c5f317",
+      "revId": "e3c0249045b24e9fdddf39e3716f36ee8b135990",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
     }
   ]
 }
