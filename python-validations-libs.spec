@@ -43,14 +43,14 @@ BuildRequires:  python3-testscenarios
 BuildRequires:  python3-testtools
 BuildRequires:  python3-ansible-runner >= 1.4.4
 BuildRequires:  python3-cliff >= 3.2.0
-BuildRequires:  ansible >= 2.8
+BuildRequires:  (python3dist(ansible) >= 2.8 or ansible-core)
 
 Requires:       python3-pbr >= 3.1.1
 Requires:       python3-six >= 1.11.0
 Requires:       python3-ansible-runner >= 1.4.4
 Requires:       python3-PyYAML >= 3.13
 Requires:       python3-cliff >= 3.2.0
-Requires:       ansible >= 2.8
+Requires:       (python3dist(ansible) >= 2.8 or ansible-core)
 
 %description -n python3-%{upstream_name}
 A collection of python libraries for the Validation Framework
