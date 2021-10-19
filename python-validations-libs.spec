@@ -7,7 +7,7 @@
 
 Name:           python-%{upstream_name}
 Summary:        %{sum}
-Version:        1.3.0
+Version:        1.4.0
 Release:        1%{?dist}
 License:        ASL 2.0
 URL:            https://opendev.org/openstack/validations-libs
@@ -38,7 +38,7 @@ BuildRequires:  openstack-macros
 BuildRequires:  python3-setuptools
 BuildRequires:  python3-devel
 BuildRequires:  python3-pbr >= 3.1.1
-BuildRequires:  python3-testrepository
+BuildRequires:  python3-stestr
 BuildRequires:  python3-testscenarios
 BuildRequires:  python3-testtools
 BuildRequires:  python3-ansible-runner >= 1.4.4
@@ -77,7 +77,7 @@ fi
 mv %{buildroot}/usr/etc/validation.cfg %{buildroot}%{_sysconfdir}/validation.cfg
 
 %check
-PYTHON=%{__python3} %{__python3} setup.py test
+PYTHON=%{__python3} stestr run
 
 %files -n python3-%{upstream_name}
 %license LICENSE
@@ -89,6 +89,9 @@ PYTHON=%{__python3} %{__python3} setup.py test
 %exclude %{python3_sitelib}/validations_libs/test*
 
 %changelog
+* Tue Oct 19 2021 RDO <dev@lists.rdoproject.org> 1.4.0-1
+- Update to 1.4.0
+
 * Mon Aug 16 2021 Jiri Podivin <jpodivin@redhat.com> 1.3.0-1
 - Update to 1.3.0
 
