@@ -92,3 +92,4 @@ PYTHON=%{__python3} %{__python3} setup.py test
 %exclude %{python3_sitelib}/validations_libs/test*
 
 %changelog
+# REMOVEME: error caused by commit https://opendev.org/openstack/validations-libs/commit/1bbf282356dec6a3c32a195d96b7d9924c53e0d1
