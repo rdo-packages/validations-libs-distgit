@@ -44,6 +44,7 @@ BuildRequires:  python3-testtools
 BuildRequires:  python3-ansible-runner >= 1.4.4
 BuildRequires:  python3-cliff >= 3.2.0
 BuildRequires:  (python3dist(ansible) >= 2.8 or ansible-core)
+BuildRequires:  python3-oslotest >= 3.2.0
 
 Requires:       python3-pbr >= 3.1.1
 Requires:       python3-six >= 1.11.0
@@ -89,6 +90,16 @@ PYTHON=%{__python3} stestr run
 %doc README* AUTHORS ChangeLog
 %{python3_sitelib}/validations_libs
 %{python3_sitelib}/validations_libs-*.egg-info
+
+#temporary conditional until callbacks are moved to validations-libs
+if [ -d "%{buildroot}/usr/share/ansible/callback_plugins" ]; then
+%{_datadir}/ansible/callback_plugins/fail_if_no_hosts.py
+%{_datadir}/ansible/callback_plugins/validation_json.py
+%{_datadir}/ansible/callback_plugins/http_json.py
+%{_datadir}/ansible/callback_plugins/validation_output.py
+%{_datadir}/ansible/callback_plugins/validation_stdout.py
+fi
+
 %exclude %{python3_sitelib}/validations_libs/test*
 
 %changelog
