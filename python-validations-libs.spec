@@ -47,6 +47,7 @@ BuildRequires:  python-pathlib2
 BuildRequires:  python-configparser
 %endif
 BuildRequires:  python%{pyver}-cliff >= 2.16.0
+BuildRequires:  python%{pyver}-oslotest >= 3.2.0
 
 Requires:       python%{pyver}-pbr >= 3.1.1
 Requires:       python%{pyver}-six >= 1.11.0
@@ -101,6 +102,12 @@ ansible_base_dir = /usr/share/ansible/
 EOF
 fi
 
+# TODO(jpodivin) until callbacks are moved to validations-libs
+# https://review.opendev.org/c/openstack/validations-libs/+/820551
+if [ ! -d "%{buildroot}%{_datadir}/ansible/callback_plugins" ]; then
+mkdir -p %{buildroot}%{_datadir}/ansible/callback_plugins
+fi
+
 %check
 
 # Workaround py27 tests due to:
@@ -121,6 +128,7 @@ PYTHON=%{pyver_bin} %{pyver_bin} setup.py test
 %{pyver_sitelib}/validations_libs
 %{pyver_sitelib}/validations_libs-*.egg-info
 %exclude %{pyver_sitelib}/validations_libs/test*
+%{_datadir}/ansible/callback_plugins/
 
 %changelog
 * Fri Sep 25 2020 RDO <dev@lists.rdoproject.org> 1.0.4-0.1
