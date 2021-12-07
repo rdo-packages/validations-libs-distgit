@@ -30,6 +30,7 @@ BuildRequires:  python3-testscenarios
 BuildRequires:  python3-testtools
 BuildRequires:  python3-ansible-runner >= 1.4.4
 BuildRequires:  python3-cliff >= 3.1.0
+BuildRequires:  python3-oslotest >= 3.2.0
 
 Requires:       python3-pbr >= 3.1.1
 Requires:       python3-six >= 1.11.0
@@ -69,6 +70,12 @@ ansible_base_dir = /usr/share/ansible/
 EOF
 fi
 
+# TODO(jpodivin) until callbacks are moved to validations-libs
+# https://review.opendev.org/c/openstack/validations-libs/+/820551
+if [ ! -d "%{buildroot}%{_datadir}/ansible/callback_plugins" ]; then
+mkdir -p %{buildroot}%{_datadir}/ansible/callback_plugins
+fi
+
 %check
 PYTHON=%{__python3} %{__python3} setup.py test
 
@@ -79,6 +86,7 @@ PYTHON=%{__python3} %{__python3} setup.py test
 %doc README* AUTHORS ChangeLog
 %{python3_sitelib}/validations_libs
 %{python3_sitelib}/validations_libs-*.egg-info
+%{_datadir}/ansible/callback_plugins/
 %exclude %{python3_sitelib}/validations_libs/test*
 
 %changelog
