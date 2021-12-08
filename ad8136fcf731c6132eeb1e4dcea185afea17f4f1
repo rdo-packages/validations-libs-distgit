@@ -1,0 +1,10 @@
+Code-Review+2: mathieu bultel <mat.bultel@gmail.com>
+Code-Review+2: Gaël Chamoulaud <gchamoul@redhat.com>
+Code-Review+1: Adriano Vieira Petrich <apetrich@redhat.com>
+Workflow+1: Gaël Chamoulaud <gchamoul@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Wed, 08 Dec 2021 15:30:13 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/validations-libs-distgit/+/37060
+Project: openstack/validations-libs-distgit
+Branch: refs/heads/rpm-master
