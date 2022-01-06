@@ -29,13 +29,21 @@ BuildRequires:  python3-testrepository
 BuildRequires:  python3-testscenarios
 BuildRequires:  python3-testtools
 BuildRequires:  python3-ansible-runner >= 1.4.4
+<<<<<<< HEAD   (43d79c Set python setuptool path for data file installation)
 BuildRequires:  python3-cliff >= 3.1.0
+=======
+BuildRequires:  python3-cliff >= 2.16.0
+>>>>>>> CHANGE (256962 Move Cliff requirements to 2.16.0)
 
 Requires:       python3-pbr >= 3.1.1
 Requires:       python3-six >= 1.11.0
 Requires:       python3-ansible-runner >= 1.4.4
 Requires:       python3-PyYAML
+<<<<<<< HEAD   (43d79c Set python setuptool path for data file installation)
 Requires:       python3-cliff >= 3.1.0
+=======
+Requires:       python3-cliff >= 2.16.0
+>>>>>>> CHANGE (256962 Move Cliff requirements to 2.16.0)
 
 %description -n python3-%{upstream_name}
 A collection of python libraries for the Validation Framework
