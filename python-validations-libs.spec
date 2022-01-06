@@ -43,6 +43,7 @@ BuildRequires:  python%{pyver}-testtools
 BuildRequires:  python%{pyver}-ansible-runner >= 1.2.0
 %if %{pyver} == 2
 BuildRequires:  python2-mock
+BuildRequires:  python-pathlib2
 %endif
 BuildRequires:  python%{pyver}-cliff >= 2.16.0
 
