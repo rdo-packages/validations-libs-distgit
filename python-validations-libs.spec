@@ -43,6 +43,7 @@ BuildRequires:  python%{pyver}-testtools
 BuildRequires:  python%{pyver}-ansible-runner >= 1.2.0
 %if %{pyver} == 2
 BuildRequires:  python2-mock
+BuildRequires:  python-pathlib2
 %endif
 BuildRequires:  python%{pyver}-cliff >= 2.16.0
 
@@ -60,6 +61,9 @@ Requires:       python%{pyver}-cliff >= 2.16.0
 A collection of python libraries for the Validation Framework
 
 %prep
+%if %{pyver} == 2
+sed -i "682,688d" validations_libs/utils.py
+%endif
 %autosetup -n %{upstream_name}-%{upstream_version} -S git
 
 # Remove the requirements file so that pbr hooks don't add it
@@ -110,5 +114,3 @@ PYTHON=%{pyver_bin} %{pyver_bin} setup.py test
 %changelog
 * Fri Sep 25 2020 RDO <dev@lists.rdoproject.org> 1.0.4-0.1
 - Update to 1.0.4
-
-
