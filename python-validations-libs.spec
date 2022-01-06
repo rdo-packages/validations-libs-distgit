@@ -42,7 +42,7 @@ BuildRequires:  python3-stestr
 BuildRequires:  python3-testscenarios
 BuildRequires:  python3-testtools
 BuildRequires:  python3-ansible-runner >= 1.4.4
-BuildRequires:  python3-cliff >= 3.2.0
+BuildRequires:  python3-cliff >= 2.16.0
 BuildRequires:  (python3dist(ansible) >= 2.8 or ansible-core)
 BuildRequires:  python3-oslotest >= 3.2.0
 
