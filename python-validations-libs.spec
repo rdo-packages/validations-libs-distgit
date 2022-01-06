@@ -34,6 +34,7 @@ Summary:        %{sum}
 
 BuildRequires:  git
 BuildRequires:  openstack-macros
+<<<<<<< HEAD   (674fb6 Add configparser as requires for python2.7 on centos7 builds)
 BuildRequires:  python%{pyver}-setuptools
 BuildRequires:  python%{pyver}-devel
 BuildRequires:  python%{pyver}-pbr >= 3.1.1
@@ -47,7 +48,19 @@ BuildRequires:  python-pathlib2
 BuildRequires:  python-configparser
 %endif
 BuildRequires:  python%{pyver}-cliff >= 2.16.0
+=======
+BuildRequires:  python3-setuptools
+BuildRequires:  python3-devel
+BuildRequires:  python3-pbr >= 3.1.1
+BuildRequires:  python3-testrepository
+BuildRequires:  python3-testscenarios
+BuildRequires:  python3-testtools
+BuildRequires:  python3-ansible-runner >= 1.4.4
+BuildRequires:  python3-oslotest >= 3.2.0
+BuildRequires:  python3-cliff >= 2.16.0
+>>>>>>> CHANGE (746f17 Move Cliff requirements to 2.16.0)
 
+<<<<<<< HEAD   (674fb6 Add configparser as requires for python2.7 on centos7 builds)
 Requires:       python%{pyver}-pbr >= 3.1.1
 Requires:       python%{pyver}-six >= 1.11.0
 Requires:       python%{pyver}-ansible-runner >= 1.2.0
@@ -59,6 +72,13 @@ Requires:       python-configparser
 Requires:       python%{pyver}-PyYAML
 %endif
 Requires:       python%{pyver}-cliff >= 2.16.0
+=======
+Requires:       python3-pbr >= 3.1.1
+Requires:       python3-six >= 1.11.0
+Requires:       python3-ansible-runner >= 1.4.4
+Requires:       python3-PyYAML
+BuildRequires:  python3-cliff >= 2.16.0
+>>>>>>> CHANGE (746f17 Move Cliff requirements to 2.16.0)
 
 %description -n python%{pyver}-%{upstream_name}
 A collection of python libraries for the Validation Framework
