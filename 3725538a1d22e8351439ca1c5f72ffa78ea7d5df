@@ -16,6 +16,24 @@
       "revId": "3725538a1d22e8351439ca1c5f72ffa78ea7d5df",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "0df6d6ae_4d8da0d7",
+        "filename": "python-validations-libs.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 53,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-01-07T08:15:26Z",
+      "side": 1,
+      "message": "i guess so",
+      "parentUuid": "60519f86_f3de57c0",
+      "revId": "3725538a1d22e8351439ca1c5f72ffa78ea7d5df",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
     }
   ]
 }
