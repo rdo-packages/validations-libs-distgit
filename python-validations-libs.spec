@@ -92,6 +92,7 @@ PYTHON=%{__python3} %{__python3} setup.py test
 %files -n python3-%{upstream_name}
 %license LICENSE
 %config(noreplace) %attr(0644, root, root) %{_sysconfdir}/validation.cfg
+
 %{_bindir}/validation
 %doc README* AUTHORS ChangeLog
 %{python3_sitelib}/validations_libs
