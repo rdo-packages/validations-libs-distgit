@@ -52,6 +52,7 @@ Requires:       python%{pyver}-six >= 1.11.0
 Requires:       python%{pyver}-ansible-runner >= 1.2.0
 %if %{pyver} == 2
 Requires:       PyYAML
+Requires:       python-pathlib2
 %else
 Requires:       python%{pyver}-PyYAML
 %endif
