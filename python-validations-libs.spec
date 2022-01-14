@@ -44,6 +44,7 @@ BuildRequires:  python%{pyver}-ansible-runner >= 1.2.0
 %if %{pyver} == 2
 BuildRequires:  python2-mock
 BuildRequires:  python-pathlib2
+BuildRequires:  python-configparser
 %endif
 BuildRequires:  python%{pyver}-cliff >= 2.16.0
 
@@ -53,6 +54,7 @@ Requires:       python%{pyver}-ansible-runner >= 1.2.0
 %if %{pyver} == 2
 Requires:       PyYAML
 Requires:       python-pathlib2
+Requires:       python-configparser
 %else
 Requires:       python%{pyver}-PyYAML
 %endif
