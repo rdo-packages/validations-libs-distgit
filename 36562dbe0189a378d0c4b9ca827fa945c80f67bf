@@ -1,0 +1,8 @@
+Code-Review+2: David J Peacock <david.j.peacock@gmail.com>
+Workflow+1: David J Peacock <david.j.peacock@gmail.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Fri, 11 Mar 2022 14:53:48 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/validations-libs-distgit/+/39350
+Project: openstack/validations-libs-distgit
+Branch: refs/heads/victoria-rdo
