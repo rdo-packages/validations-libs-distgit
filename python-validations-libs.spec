@@ -95,3 +95,4 @@ PYTHON=%{__python3} stestr run
 * Tue Oct 19 2021 RDO <dev@lists.rdoproject.org> 1.4.0-1
 - Update to 1.4.0
 
+# REMOVEME: error caused by commit https://opendev.org/openstack/validations-libs/commit/9163d8bcbcf364db9c04323436de35fc3946b380
