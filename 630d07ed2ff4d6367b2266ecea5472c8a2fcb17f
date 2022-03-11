@@ -1,0 +1,9 @@
+Code-Review+1: Jiří Podivín <jpodivin@gmail.com>
+Code-Review+2: David J Peacock <david.j.peacock@gmail.com>
+Workflow+1: David J Peacock <david.j.peacock@gmail.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Fri, 11 Mar 2022 15:19:36 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/validations-libs-distgit/+/39352
+Project: openstack/validations-libs-distgit
+Branch: refs/heads/wallaby-rdo
