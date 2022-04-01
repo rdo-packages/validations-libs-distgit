@@ -99,3 +99,4 @@ PYTHON=%{__python3} %{__python3} setup.py test
 - Update to 1.0.0
 
 
+# REMOVEME: error caused by commit https://opendev.org/openstack/validations-libs/commit/3344af0ecf1aba7fe72cbe316ff46d873826ad10
