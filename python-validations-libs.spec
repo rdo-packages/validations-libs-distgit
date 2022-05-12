@@ -86,6 +86,11 @@ if [ ! -d "%{buildroot}%{_datadir}/ansible/callback_plugins" ]; then
 mkdir -p %{buildroot}%{_datadir}/ansible/callback_plugins
 fi
 
+# Ignore VF container if exists
+if [ -d "%{buildroot}%/container" ]; then
+rm -rf  %{buildroot}/container
+fi
+
 %check
 PYTHON=%{__python3} stestr run
 
