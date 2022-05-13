@@ -80,12 +80,6 @@ if [ -f "%{buildroot}/usr/etc/validation.cfg" ]; then
 mv %{buildroot}/usr/etc/validation.cfg %{buildroot}%{_sysconfdir}/validation.cfg
 fi
 
-# TODO(jpodivin) until callbacks are moved to validations-libs
-# https://review.opendev.org/c/openstack/validations-libs/+/820551
-if [ ! -d "%{buildroot}%{_datadir}/ansible/callback_plugins" ]; then
-mkdir -p %{buildroot}%{_datadir}/ansible/callback_plugins
-fi
-
 %check
 PYTHON=%{__python3} stestr run
 
