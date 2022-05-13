@@ -95,12 +95,6 @@ mkdir -p %{buildroot}%{_sysconfdir}
 fi
 mv %{buildroot}/usr/etc/validation.cfg %{buildroot}%{_sysconfdir}/validation.cfg
 
-# TODO(jpodivin) until callbacks are moved to validations-libs
-# https://review.opendev.org/c/openstack/validations-libs/+/820551
-if [ ! -d "%{buildroot}%{_datadir}/ansible/callback_plugins" ]; then
-mkdir -p %{buildroot}%{_datadir}/ansible/callback_plugins
-fi
-
 # Man pages installation CLI and API
 install -d -m 755 %{buildroot}%{_mandir}/man1
 install -m 644 doc/build/man/vf.1 %{buildroot}%{_mandir}/man1
