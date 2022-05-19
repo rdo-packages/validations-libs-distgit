@@ -45,6 +45,8 @@ BuildRequires:  python3-ansible-runner >= 1.4.4
 BuildRequires:  python3-cliff >= 2.16.0
 BuildRequires:  (python3dist(ansible) >= 2.8 or ansible-core)
 BuildRequires:  python3-oslotest >= 3.2.0
+BuildRequires:  python3-sphinx >= 3.4.0
+BuildRequires:  python3-sphinxcontrib-apidoc
 
 Requires:       python3-pbr >= 3.1.1
 Requires:       python3-six >= 1.11.0
@@ -70,6 +72,22 @@ A collection of python libraries for the Validation Framework
 %build
 %{py3_build}
 
+# Man pages build
+# Separate pages are compiled for CLI and API documentation.
+# The extension list is overriden to limit number of dependencies needed
+# to build the docs and potential points of failure.
+# Copyright notice is filled dynamically with year of the build.
+# Improperly set up build environment may result in nonsensical or incorrrect
+# year in the copyright notice.
+%define buildyear %(date +%Y)
+
+PYTHONPATH=${PWD} %sphinx_build \
+ -b man doc/source doc/build/man \
+ -a -E -d doc/build/doctrees \
+ -T \
+ -D extensions=cliff.sphinxext,sphinx.ext.autodoc,sphinxcontrib.apidoc \
+ -D copyright='%{buildyear}, Openstack Foundation'
+
 %install
 %{py3_install}
 if [ ! -d "%{buildroot}%{_sysconfdir}" ]; then
@@ -86,6 +104,13 @@ if [ ! -d "%{buildroot}%{_datadir}/ansible/callback_plugins" ]; then
 mkdir -p %{buildroot}%{_datadir}/ansible/callback_plugins
 fi
 
+# Man pages installation CLI and API
+install -d -m 755 %{buildroot}%{_mandir}/man1
+install -m 644 doc/build/man/vf.1 %{buildroot}%{_mandir}/man1
+
+install -d -m 755 %{buildroot}%{_mandir}/man3
+install -m 644 doc/build/man/validations-libs.3 %{buildroot}%{_mandir}/man3
+
 %check
 PYTHON=%{__python3} stestr run
 
@@ -93,7 +118,8 @@ PYTHON=%{__python3} stestr run
 %license LICENSE
 %config(noreplace) %attr(0644, root, root) %{_sysconfdir}/validation.cfg
 %{_bindir}/validation
-%doc README* AUTHORS ChangeLog
+%doc README.rst AUTHORS ChangeLog
+%{_mandir}/man*/*
 %{python3_sitelib}/validations_libs
 %{python3_sitelib}/validations_libs-*.egg-info
 %{_datadir}/ansible/callback_plugins/
