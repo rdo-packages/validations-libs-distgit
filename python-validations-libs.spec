@@ -45,6 +45,7 @@ BuildRequires:  python3-ansible-runner >= 1.4.0
 BuildRequires:  python3-cliff >= 2.16.0
 BuildRequires:  (python3dist(ansible) >= 2.8 or ansible-core)
 BuildRequires:  python3-oslotest >= 3.2.0
+BuildRequires:  python3-docutils
 
 Requires:       python3-pbr >= 3.1.1
 Requires:       python3-six >= 1.11.0
@@ -69,6 +70,8 @@ A collection of python libraries for the Validation Framework
 
 %build
 %{py3_build}
+#Man pages build
+grep -v "\(image::\)\|\(:target:\)" README.rst | rst2man > README.man
 
 %install
 %{py3_install}
@@ -93,7 +96,7 @@ PYTHON=%{__python3} stestr run
 %license LICENSE
 %config(noreplace) %attr(0644, root, root) %{_sysconfdir}/validation.cfg
 %{_bindir}/validation
-%doc README* AUTHORS ChangeLog
+%doc README.man AUTHORS ChangeLog
 %{python3_sitelib}/validations_libs
 %{python3_sitelib}/validations_libs-*.egg-info
 %{_datadir}/ansible/callback_plugins/
