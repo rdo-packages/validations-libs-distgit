@@ -45,6 +45,8 @@ BuildRequires:  python3-ansible-runner >= 1.4.0
 BuildRequires:  python3-cliff >= 2.16.0
 BuildRequires:  (python3dist(ansible) >= 2.8 or ansible-core)
 BuildRequires:  python3-oslotest >= 3.2.0
+BuildRequires:  python3-docutils
+BuildRequires:  gzip
 
 Requires:       python3-pbr >= 3.1.1
 Requires:       python3-six >= 1.11.0
@@ -69,6 +71,9 @@ A collection of python libraries for the Validation Framework
 
 %build
 %{py3_build}
+#Man pages build
+grep -v "\(image::\)\|\(:target:\)" README.rst | rst2man > vf.1 
+gzip -c vf.1 > vf.1.gz
 
 %install
 %{py3_install}
@@ -86,6 +91,10 @@ if [ ! -d "%{buildroot}%{_datadir}/ansible/callback_plugins" ]; then
 mkdir -p %{buildroot}%{_datadir}/ansible/callback_plugins
 fi
 
+# Install man pages
+mkdir -p %{_mandir}/man1/
+mv vf.1.gz %{_mandir}/man1/vf.1.gz
+
 %check
 PYTHON=%{__python3} stestr run
 
@@ -93,7 +102,8 @@ PYTHON=%{__python3} stestr run
 %license LICENSE
 %config(noreplace) %attr(0644, root, root) %{_sysconfdir}/validation.cfg
 %{_bindir}/validation
-%doc README* AUTHORS ChangeLog
+%doc README.rst AUTHORS ChangeLog
+%doc %{_mandir}/man1/vf.1.gz
 %{python3_sitelib}/validations_libs
 %{python3_sitelib}/validations_libs-*.egg-info
 %{_datadir}/ansible/callback_plugins/
