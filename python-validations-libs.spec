@@ -17,8 +17,8 @@
 
 Name:           python-%{upstream_name}
 Summary:        %{sum}
-Version:        1.0.4
-Release:        0.1%{?dist}
+Version:        1.6.0
+Release:        1%{?dist}
 License:        ASL 2.0
 URL:            https://opendev.org/openstack/validations-libs
 Source0:        https://tarballs.opendev.org/openstack/%{upstream_name}/%{upstream_name}-%{upstream_version}.tar.gz
@@ -131,5 +131,8 @@ PYTHON=%{pyver_bin} %{pyver_bin} setup.py test
 %{_datadir}/ansible/callback_plugins/
 
 %changelog
+* Thu May 19 2022 RDO <dev@lists.rdoproject.org> 1.6.0-1
+- Update to 1.6.0
+
 * Fri Sep 25 2020 RDO <dev@lists.rdoproject.org> 1.0.4-0.1
 - Update to 1.0.4
