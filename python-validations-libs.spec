@@ -86,6 +86,9 @@ if [ ! -d "%{buildroot}%{_datadir}/ansible/callback_plugins" ]; then
 mkdir -p %{buildroot}%{_datadir}/ansible/callback_plugins
 fi
 
+# Creating a symlink for the new CLI name
+ln -s %{_bindir}/validation %{_bindir}/vf
+
 %check
 PYTHON=%{__python3} stestr run
 
@@ -93,6 +96,7 @@ PYTHON=%{__python3} stestr run
 %license LICENSE
 %config(noreplace) %attr(0644, root, root) %{_sysconfdir}/validation.cfg
 %{_bindir}/validation
+%{_bindir}/vf
 %doc README* AUTHORS ChangeLog
 %{python3_sitelib}/validations_libs
 %{python3_sitelib}/validations_libs-*.egg-info
