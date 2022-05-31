@@ -89,10 +89,15 @@ fi
 %check
 PYTHON=%{__python3} stestr run
 
+%post
+# Creating a symlink for the new CLI name
+ln -s %{_bindir}/validation %{_bindir}/vf
+
 %files -n python3-%{upstream_name}
 %license LICENSE
 %config(noreplace) %attr(0644, root, root) %{_sysconfdir}/validation.cfg
 %{_bindir}/validation
+%{_bindir}/vf
 %doc README* AUTHORS ChangeLog
 %{python3_sitelib}/validations_libs
 %{python3_sitelib}/validations_libs-*.egg-info
