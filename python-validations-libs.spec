@@ -89,6 +89,14 @@ fi
 %check
 PYTHON=%{__python3} stestr run
 
+%post
+# Creating a symlink for the new CLI name
+ln -s %{_bindir}/validation %{_bindir}/vf
+
+%preun
+# Removing symlink after uninstallation
+rm %{_bindir}/vf
+
 %files -n python3-%{upstream_name}
 %license LICENSE
 %config(noreplace) %attr(0644, root, root) %{_sysconfdir}/validation.cfg
