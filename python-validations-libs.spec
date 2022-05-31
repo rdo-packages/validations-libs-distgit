@@ -105,13 +105,21 @@ install -m 644 doc/build/man/vf.1 %{buildroot}%{_mandir}/man1
 install -d -m 755 %{buildroot}%{_mandir}/man3
 install -m 644 doc/build/man/validations-libs.3 %{buildroot}%{_mandir}/man3
 
+# Creating a symlink for the new CLI name
+ln -s -f %{_bindir}/validation %{buildroot}%{_bindir}/vf
+
 %check
 PYTHON=%{__python3} stestr run
+
+%preun
+# Removing symlink after uninstallation
+rm %{_bindir}/vf
 
 %files -n python3-%{upstream_name}
 %license LICENSE
 %config(noreplace) %attr(0644, root, root) %{_sysconfdir}/validation.cfg
 %{_bindir}/validation
+%{_bindir}/vf
 %doc README.rst AUTHORS ChangeLog
 %{_mandir}/man*/*
 %{python3_sitelib}/validations_libs
