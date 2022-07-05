@@ -1,5 +1,6 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x2426b928085a020d8a90d0d879ab7008d0896c8a
+%global sources_gpg_sign 0xc31292066be772022438222c184fd3e1edf21a78
+
 
 %{!?upstream_version: %global upstream_version %{version}}
 %global upstream_name validations-libs
@@ -7,7 +8,7 @@
 
 Name:           python-%{upstream_name}
 Summary:        %{sum}
-Version:        1.0.4
+Version:        1.6.0
 Release:        2%{?dist}
 License:        ASL 2.0
 URL:            https://opendev.org/openstack/validations-libs
@@ -109,6 +110,9 @@ PYTHON=%{__python3} %{__python3} setup.py test
 %exclude %{python3_sitelib}/validations_libs/test*
 
 %changelog
+* Tue Jul 12 2022 Adriano Petrich <apetrich@redhat.com> 1.6.0-1
+- Update to 1.6.0
+
 * Wed Oct 21 2020 Joel Capitao <jcapitao@redhat.com> 1.0.4-2
 - Enable sources tarball validation using GPG signature.
 
