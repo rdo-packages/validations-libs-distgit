@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d6158ae3_9729d0a6",
+        "filename": "python-validations-libs.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 2,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-07-05T13:04:45Z",
+      "side": 1,
+      "message": "You need to update gpg signaure to the current one. It must be:\n\n0xa63ea142678138d1bb15f2e303bdfd64dd164087",
+      "range": {
+        "startLine": 2,
+        "startChar": 25,
+        "endLine": 2,
+        "endChar": 67
+      },
+      "revId": "78f62d49004ad779e54ef5eafcfcaa588c48774a",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
