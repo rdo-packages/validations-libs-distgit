@@ -7,7 +7,7 @@
 
 Name:           python-%{upstream_name}
 Summary:        %{sum}
-Version:        1.0.4
+Version:        1.7.0
 Release:        2%{?dist}
 License:        ASL 2.0
 URL:            https://opendev.org/openstack/validations-libs
