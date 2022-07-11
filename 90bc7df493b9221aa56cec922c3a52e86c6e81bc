@@ -1,6 +1,23 @@
 {
   "comments": [
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "716ffaac_494b9ce9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-07-11T15:02:29Z",
+      "side": 1,
+      "message": "ussuri is following stable/1.6. If you need to update to 1.7, update https://github.com/redhat-openstack/rdoinfo/blob/master/tags/ussuri.yml#L1222 first",
+      "revId": "90bc7df493b9221aa56cec922c3a52e86c6e81bc",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "c136011e_3019371e",
