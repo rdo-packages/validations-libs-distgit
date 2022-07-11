@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c8c5da9a_71d6a611",
+        "filename": "python-validations-libs.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-07-11T14:56:07Z",
+      "side": 1,
+      "message": "Sorry, i forget this first. Please add a new changelog entry about update to 1.7.0.",
+      "range": {
+        "startLine": 102,
+        "startChar": 0,
+        "endLine": 102,
+        "endChar": 1
+      },
+      "revId": "18f8fe5cb6093ee676d3462184a52c142caf9ce2",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
