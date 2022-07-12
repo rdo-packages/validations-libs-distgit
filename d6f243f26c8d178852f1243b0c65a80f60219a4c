@@ -22,6 +22,30 @@
       },
       "revId": "d6f243f26c8d178852f1243b0c65a80f60219a4c",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fe8dae45_3d0a0628",
+        "filename": "python-validations-libs.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 99,
+      "author": {
+        "id": 282
+      },
+      "writtenOn": "2022-07-12T07:50:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "c3fce68e_48fe009e",
+      "range": {
+        "startLine": 99,
+        "startChar": 0,
+        "endLine": 99,
+        "endChar": 1
+      },
+      "revId": "d6f243f26c8d178852f1243b0c65a80f60219a4c",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
