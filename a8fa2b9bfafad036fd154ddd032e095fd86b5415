@@ -16,6 +16,24 @@
       "message": "note that validations-libs is pinned to branch stable/1.6. If you want to update it for victoria, start by updating https://github.com/redhat-openstack/rdoinfo/blob/master/tags/victoria.yml#L1184",
       "revId": "a8fa2b9bfafad036fd154ddd032e095fd86b5415",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "93cc7c44_c8e1127c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 282
+      },
+      "writtenOn": "2022-07-12T07:45:15Z",
+      "side": 1,
+      "message": "Makes sense. I\u0027ve updated the specfile to 1.6",
+      "parentUuid": "505c7eb6_f2626fb0",
+      "revId": "a8fa2b9bfafad036fd154ddd032e095fd86b5415",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
