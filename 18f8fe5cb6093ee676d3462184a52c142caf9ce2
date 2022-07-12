@@ -22,6 +22,30 @@
       },
       "revId": "18f8fe5cb6093ee676d3462184a52c142caf9ce2",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3df04374_16d0ffe7",
+        "filename": "python-validations-libs.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 282
+      },
+      "writtenOn": "2022-07-12T07:38:35Z",
+      "side": 1,
+      "message": "Done. Sorry I thought it was an automation or something that did the changelog",
+      "parentUuid": "c8c5da9a_71d6a611",
+      "range": {
+        "startLine": 102,
+        "startChar": 0,
+        "endLine": 102,
+        "endChar": 1
+      },
+      "revId": "18f8fe5cb6093ee676d3462184a52c142caf9ce2",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
