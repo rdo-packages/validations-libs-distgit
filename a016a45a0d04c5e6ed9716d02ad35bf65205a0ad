@@ -39,6 +39,30 @@
       },
       "revId": "a016a45a0d04c5e6ed9716d02ad35bf65205a0ad",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "96d1c2e8_04ae13c3",
+        "filename": "python-validations-libs.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 717
+      },
+      "writtenOn": "2022-07-15T08:00:28Z",
+      "side": 1,
+      "message": "Not need per se. It\u0027s more of a preference, because we have it set to 1.4.0 in master and upstream source.",
+      "parentUuid": "28736c0d_c767d3ad",
+      "range": {
+        "startLine": 44,
+        "startChar": 0,
+        "endLine": 44,
+        "endChar": 2
+      },
+      "revId": "a016a45a0d04c5e6ed9716d02ad35bf65205a0ad",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
