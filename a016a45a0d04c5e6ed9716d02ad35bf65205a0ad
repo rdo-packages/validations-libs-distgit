@@ -1,0 +1,44 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "41eaaa93_f7938027",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-07-15T07:51:02Z",
+      "side": 1,
+      "message": "We",
+      "revId": "a016a45a0d04c5e6ed9716d02ad35bf65205a0ad",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "28736c0d_c767d3ad",
+        "filename": "python-validations-libs.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 44,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-07-15T07:51:02Z",
+      "side": 1,
+      "message": "These are the versions we have in wallaby in RDO:\n\n  cloud8s-openstack-wallaby-testing: python-ansible-runner-1.4.6-3.el8\n  cloud9s-openstack-wallaby-testing: python-ansible-runner-2.0.0a1-3.el9s\n\n\nI\u0027m not sure why we need to decrease minimal version here.",
+      "range": {
+        "startLine": 44,
+        "startChar": 0,
+        "endLine": 44,
+        "endChar": 2
+      },
+      "revId": "a016a45a0d04c5e6ed9716d02ad35bf65205a0ad",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
