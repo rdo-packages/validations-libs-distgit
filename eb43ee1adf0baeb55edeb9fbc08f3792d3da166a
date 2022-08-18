@@ -16,6 +16,23 @@
       "message": "recheck",
       "revId": "eb43ee1adf0baeb55edeb9fbc08f3792d3da166a",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6ac71257_d86f4ef0",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-08-18T11:23:01Z",
+      "side": 1,
+      "message": "yoga is pinned to 1.7.0, unpin it or pin it to 1.7.1 before merging this patch.\n\nhttps://github.com/redhat-openstack/rdoinfo/blob/master/tags/yoga.yml#L1226",
+      "revId": "eb43ee1adf0baeb55edeb9fbc08f3792d3da166a",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
