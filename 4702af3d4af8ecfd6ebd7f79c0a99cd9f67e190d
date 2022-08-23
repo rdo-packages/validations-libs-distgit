@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "01fe17c0_be4e0759",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 635
+      },
+      "writtenOn": "2022-08-23T06:39:31Z",
+      "side": 1,
+      "message": "Do you want it in a new release ? or are you willing to wait until next version update ?",
+      "revId": "4702af3d4af8ecfd6ebd7f79c0a99cd9f67e190d",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
