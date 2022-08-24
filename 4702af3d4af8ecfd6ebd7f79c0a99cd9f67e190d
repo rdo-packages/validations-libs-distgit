@@ -51,6 +51,24 @@
       "parentUuid": "590f672f_6cbf6525",
       "revId": "4702af3d4af8ecfd6ebd7f79c0a99cd9f67e190d",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "56d7280d_ac93f473",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 717
+      },
+      "writtenOn": "2022-08-24T06:04:20Z",
+      "side": 1,
+      "message": "No I don\u0027t think there is a need for bump. Technically speaking the code is the same, it\u0027s just that now a part of it is being used to build man pages. \n\nAlthough there is a dependency change in the spec file, it\u0027s mostly about making existing state of affairs explicit. The apidoc has been in the doc/requirements.txt for a while now.",
+      "parentUuid": "7488ef6d_0677d77e",
+      "revId": "4702af3d4af8ecfd6ebd7f79c0a99cd9f67e190d",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
     }
   ]
 }
