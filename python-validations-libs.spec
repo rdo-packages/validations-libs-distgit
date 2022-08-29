@@ -112,6 +112,7 @@ PYTHON=%{__python3} stestr run
 %license LICENSE
 %config(noreplace) %attr(0644, root, root) %{_sysconfdir}/validation.cfg
 %{_bindir}/validation
+%{_bindir}/vf
 %doc README.rst AUTHORS ChangeLog
 %{_mandir}/man*/*
 %{python3_sitelib}/validations_libs
