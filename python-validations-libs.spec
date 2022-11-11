@@ -105,6 +105,9 @@ install -m 644 doc/build/man/vf.1 %{buildroot}%{_mandir}/man1
 install -d -m 755 %{buildroot}%{_mandir}/man3
 install -m 644 doc/build/man/validations-libs.3 %{buildroot}%{_mandir}/man3
 
+# Create root logging directory
+install -d -m 755 %{buildroot}%{_localstatedir}/log/validations
+
 %check
 PYTHON=%{__python3} stestr run
 
@@ -118,5 +121,6 @@ PYTHON=%{__python3} stestr run
 %{python3_sitelib}/validations_libs-*.egg-info
 %{_datadir}/ansible/callback_plugins/
 %exclude %{python3_sitelib}/validations_libs/test*
+%dir %{_localstatedir}/log/validations
 
 %changelog
