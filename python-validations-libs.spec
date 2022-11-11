@@ -12,6 +12,7 @@ Release:        XXX
 License:        ASL 2.0
 URL:            https://opendev.org/openstack/validations-libs
 Source0:        https://tarballs.opendev.org/openstack/%{upstream_name}/%{upstream_name}-%{upstream_version}.tar.gz
+Source1:        validations-libs.logrotate
 # Required for tarball sources verification
 %if 0%{?sources_gpg} == 1
 Source101:        https://tarballs.opendev.org/openstack/%{upstream_name}/%{upstream_name}-%{upstream_version}.tar.gz.asc
@@ -105,12 +106,17 @@ install -m 644 doc/build/man/vf.1 %{buildroot}%{_mandir}/man1
 install -d -m 755 %{buildroot}%{_mandir}/man3
 install -m 644 doc/build/man/validations-libs.3 %{buildroot}%{_mandir}/man3
 
+# Create root logging directory and logrotate script
+install -d -m 755 %{buildroot}%{_localstatedir}/log/validations
+install -d -P -m 644 %{SOURCE01} %{buildroot}%{_sysconfdir}/logrotate.d/validations-libs
+
 %check
 PYTHON=%{__python3} stestr run
 
 %files -n python3-%{upstream_name}
 %license LICENSE
 %config(noreplace) %attr(0644, root, root) %{_sysconfdir}/validation.cfg
+%config(noreplace) %attr(0644, root, root) %{_sysconfdir}/logrotate.d/validations-libs
 %{_bindir}/validation
 %doc README.rst AUTHORS ChangeLog
 %{_mandir}/man*/*
@@ -118,5 +124,6 @@ PYTHON=%{__python3} stestr run
 %{python3_sitelib}/validations_libs-*.egg-info
 %{_datadir}/ansible/callback_plugins/
 %exclude %{python3_sitelib}/validations_libs/test*
+%dir %{_localstatedir}/log/validations
 
 %changelog
