@@ -116,7 +116,6 @@ PYTHON=%{__python3} stestr run
 %{_mandir}/man*/*
 %{python3_sitelib}/validations_libs
 %{python3_sitelib}/validations_libs-*.egg-info
-%{_datadir}/ansible/callback_plugins/
 %exclude %{python3_sitelib}/validations_libs/test*
 
 %changelog
