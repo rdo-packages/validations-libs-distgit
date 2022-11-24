@@ -72,6 +72,7 @@ A collection of python libraries for the Validation Framework
 %build
 %{py3_build}
 
+# dnm
 # Man pages build
 # Separate pages are compiled for CLI and API documentation.
 # The extension list is overriden to limit number of dependencies needed
