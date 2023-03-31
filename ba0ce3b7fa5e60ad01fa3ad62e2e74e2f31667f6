@@ -1,0 +1,9 @@
+Code-Review+2: Jiří Podivín <jpodivin@gmail.com>
+Code-Review+2: mathieu bultel <mat.bultel@gmail.com>
+Workflow+1: mathieu bultel <mat.bultel@gmail.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Fri, 31 Mar 2023 07:51:34 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/validations-libs-distgit/+/47639
+Project: openstack/validations-libs-distgit
+Branch: refs/heads/rpm-master
