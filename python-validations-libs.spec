@@ -136,3 +136,4 @@ PYTHON=%{__python3} stestr run
 - Update to 1.1.0
 
 
+# REMOVEME: error caused by commit https://opendev.org/openstack/validations-libs/commit/2847a85880195362cdb87863f8558cfce4964499
