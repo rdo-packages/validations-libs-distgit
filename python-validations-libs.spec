@@ -135,4 +135,3 @@ PYTHON=%{__python3} stestr run
 * Thu May 06 2021 RDO <dev@lists.rdoproject.org> 1.1.0-1
 - Update to 1.1.0
 
-
